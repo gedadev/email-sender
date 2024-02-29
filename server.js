@@ -27,7 +27,7 @@ app.post('/send-email', (req, res) => {
 		from: process.env.USER,
 		to: 'hello@geda.dev',
 		subject,
-		message,
+		text: message,
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
